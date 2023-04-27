@@ -1,13 +1,11 @@
 <?php
-    $host = "localhost";
     $user = "root";
     $pass = "";
-    $db = "etag";
 
-    $conn = mysqli_connect($host, $user, $pass, $db);
-
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        exit();
+    try{
+        $conn = new PDO('mysql:host=localhost;dbname=etag', $user, $pass);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }catch(PDOException $e) {
+        echo 'ERROR: ' . $e->getMessage();
     }
 ?>

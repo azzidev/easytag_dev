@@ -6,10 +6,11 @@
     $password_receive = clearString($_POST["password-house"]);
 
     if($email_receive != "" AND $password_receive !== ""){
-        $query = mysqli_query($conn, "SELECT * FROM `house_config` WHERE email_house='$email_receive'");
+        $stmt = $conn->prepare("SELECT * FROM house_config WHERE (email_house=:email)");
+        $stmt->bindParam(':email', $email_receive);
 
-        if(mysqli_num_rows($query) == 1){
-            if($obj=mysqli_fetch_object($query)){
+        if($stmt->rowCount() == 1){
+            if($obj=$stmt->fetchObject('house_config')){
                 if(password_verify($password_receive, $obj->password_house)){
                     session_start();
 
