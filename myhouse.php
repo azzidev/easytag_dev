@@ -16,15 +16,15 @@
                                 <h2 class="widget-title text-white d-inline-block">Precisa modificar algo?</h2>
                                 <div class="card post-item bg-transparent border-0 ml-5">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 bg-warning cursor-pointer scale">
-                                            <h2 class="mb-0 text-white">Trocar senha</h2>
+                                        <div class="card-img-top rounded-pill p-3 bg-warning cursor-pointer scale">
+                                            <h3 class="mb-0 text-white">Trocar senha</h3>
                                         </div>
                                     </div>
                                 </div>          
                                 <div class="card post-item bg-transparent ml-5 border-0">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 bg-danger cursor-pointer scale">
-                                            <h2 class="mb-0 text-black">Sair</h2>
+                                        <div class="card-img-top rounded-pill p-3 bg-danger cursor-pointer scale">
+                                            <h3 class="mb-0 text-black">Sair</h3>
                                         </div>
                                     </div>
                                 </div>

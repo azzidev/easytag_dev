@@ -17,8 +17,6 @@
     <a class="navbar-brand" href="index.php" class="logo">
         <img src="images/easytag.png" alt="">
     </a>
-    <h1 class="text-primary mt-3 w-100">Ice Lounge Fest</h1>
-    <!-- end of navbar-brand -->
 
     <div class="navbar navbar-dark my-4 p-0 font-primary">
         <ul class="navbar-nav w-100">
@@ -39,5 +37,8 @@
             </li>
         </ul>
     </div>
+    
+    <h1 class="text-primary mt-3 w-100">Ice Lounge Fest</h1>
+    <!-- end of navbar-brand -->
 </div></aside>
 <!-- end of sidenav -->

@@ -13,18 +13,18 @@
                     <div class="card post-item bg-transparent border-0 mb-5">
                         <div class="widget">
                             <div class="d-flex align-items-center">
-                                <h2 class="widget-title text-white d-inline-block">Vamos vender um produto</h2>               
+                                <h2 class="widget-title text-white d-inline-block">Produtos</h2>               
                                 <div class="card post-item bg-transparent border-0 ml-5">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 card-product">
-                                            <h2 class="mb-0 text-white">Criar novo produto</h2>
+                                        <div class="card-img-top rounded-pill p-3 card-product">
+                                            <h3 class="mb-0 text-white">Criar novo produto</h3>
                                         </div>
                                     </div>
                                 </div>          
                                 <div class="card post-item bg-transparent ml-5 border-0">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 bg-success cursor-pointer scale">
-                                            <h2 class="mb-0 text-black">Adicionar novo produto</h2>
+                                        <div class="card-img-top rounded-pill p-3 bg-success cursor-pointer scale">
+                                            <h3 class="mb-0 text-black">Adicionar novo produto</h3>
                                         </div>
                                     </div>
                                 </div>
