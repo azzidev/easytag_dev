@@ -83,28 +83,28 @@
                         <div class="row px-3 py-3 d-flex align-items-center justify-content-center">
                             <div class="card post-item bg-transparent border-0 mb-5">
                                 <div>
-                                    <div class="card-img-top rounded-0 p-3 card-event">
+                                    <div class="card-img-top rounded-pill p-3 card-event">
                                         <h2 class="mb-0 text-white">Criar novo evento</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="card post-item bg-transparent border-0 mb-5">
                                 <div>
-                                    <div class="card-img-top rounded-0 p-3 card-vouncher">
+                                    <div class="card-img-top rounded-pill p-3 card-vouncher">
                                         <h2 class="mb-0 text-black">Criar novo ingresso</h2>
                                     </div>
                                 </div>
                             </div>                            
                             <div class="card post-item bg-transparent border-0 mb-5">
                                 <div>
-                                    <div class="card-img-top rounded-0 p-3 card-drink">
+                                    <div class="card-img-top rounded-pill p-3 card-drink">
                                         <h2 class="mb-0 text-black">Criar nova comanda</h2>
                                     </div>
                                 </div>
                             </div>                       
                             <div class="card post-item bg-transparent border-0 mb-5">
                                 <div>
-                                    <div class="card-img-top rounded-0 p-3 card-product">
+                                    <div class="card-img-top rounded-pill p-3 card-product">
                                         <h2 class="mb-0 text-white">Criar novo produto</h2>
                                     </div>
                                 </div>

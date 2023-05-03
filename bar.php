@@ -13,18 +13,18 @@
                     <div class="card post-item bg-transparent border-0 mb-5">
                         <div class="widget">
                             <div class="d-flex align-items-center">
-                                <h2 class="widget-title text-white d-inline-block">Vamos fazer um drink</h2>              
+                                <h2 class="widget-title text-white d-inline-block">Bar</h2>              
                                 <div class="card post-item bg-transparent ml-5 border-0">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 card-drink">
-                                            <h2 class="mb-0 text-black">Criar nova comanda</h2>
+                                        <div class="card-img-top rounded-pill p-3 card-drink">
+                                            <h3 class="mb-0 text-black">Criar nova comanda</h3>
                                         </div>
                                     </div>
                                 </div>             
                                 <div class="card post-item bg-transparent ml-5 border-0">
                                     <div>
-                                        <div class="card-img-top rounded-0 p-3 bg-danger cursor-pointer scale">
-                                            <h2 class="mb-0 text-black">Adicionar novo drink</h2>
+                                        <div class="card-img-top rounded-pill p-3 bg-danger cursor-pointer scale">
+                                            <h3 class="mb-0 text-black">Adicionar novo drink</h3>
                                         </div>
                                     </div>
                                 </div>
