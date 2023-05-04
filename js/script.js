@@ -55,3 +55,23 @@ $('.click_fademe').click(() => {
     $('.click_fademe').removeClass('d-block')
   })
 })
+
+function newEvent(){
+    var validated = eventPreventInputs()
+    
+    if(validated === true){
+        
+    }
+}
+
+function eventPreventInputs(){
+    if($('#name-event').val() != '' && $('#name-event')vel().length >= 5){
+        if($('#start-event-date').val() != '' && $('#start-event-date').val() > $('#end-event-date').val()){
+            
+        }else{
+            return 'ERR000005';
+        }
+    }else{
+        return "ERR000004";
+    }
+}
