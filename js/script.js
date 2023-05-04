@@ -65,7 +65,7 @@ function newEvent(){
 }
 
 function eventPreventInputs(){
-    if($('#name-event').val() != '' && $('#name-event')vel().length >= 5){
+    if($('#name-event').val() != '' && $('#name-event').val().length >= 5){
         if($('#start-event-date').val() != '' && $('#start-event-date').val() > $('#end-event-date').val()){
             
         }else{
