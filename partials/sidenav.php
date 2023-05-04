@@ -10,6 +10,8 @@
         $productsClass = "active";
     }else if($name == "myhouse"){
         $houseClass = "active";
+    }else if($name == "events"){
+        $eventsClass = "active";
     }
 ?>
 <!-- start of sidenav -->
@@ -22,6 +24,9 @@
         <ul class="navbar-nav w-100">
             <li class="nav-item <?=$indexClass?>">
                 <a class="nav-link text-white px-0 pt-0" href="index.php">Dashboard</a>
+            </li>
+            <li class="nav-item <?=$eventsClass?>">
+                <a class="nav-link text-white px-0" href="events.php">Eventos</a>
             </li>
             <li class="nav-item <?=$barClass?>">
                 <a class="nav-link text-white px-0" href="bar.php">Bar</a>

@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div class="modal backdrop-blur" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="newEventModal" aria-hidden="true">
+    <div class="modal backdrop-blur d-block" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="newEventModal" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content bg-dark-1 shadow-lg">
                 <div class="modal-header border-0">
@@ -204,7 +204,7 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar evento</button>
+                    <button type="button" class="btn btn-primary border-0">Criar evento</button>
                 </div>
             </div>
         </div>
@@ -276,7 +276,7 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Gerar ingresso</button>
+                    <button type="button" class="btn btn-primary border-0">Gerar ingresso</button>
                 </div>
             </div>
         </div>
