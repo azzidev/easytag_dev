@@ -56,18 +56,31 @@ $('.click_fademe').click(() => {
   })
 })
 
-function newEvent(){
+function newEvent(e){
     var validated = eventPreventInputs()
     
     if(validated === true){
-        
+        e.preventDefault();
+
+        var form = $("#new-event-form");
+      
+        $.ajax({
+            type: "POST",
+            url: "modules/new-event",
+            data: form.serialize(),
+            success: function(data){
+                
+            }
+        });
     }
 }
 
 function eventPreventInputs(){
     if($('#name-event').val() != '' && $('#name-event').val().length >= 5){
         if($('#start-event-date').val() != '' && $('#start-event-date').val() > $('#end-event-date').val()){
-            
+            if($('#end-event-date').val() != '' && $('#end-event-date').val() < $('#start-event-date').val()){
+
+            }
         }else{
             return 'ERR000005';
         }

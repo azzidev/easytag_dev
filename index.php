@@ -126,81 +126,83 @@
                     </button>
                 </div>
                 <div class="modal-body bg-dark rounded-lg mx-2 my-1">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="name-event">Nome do evento</label>
-                                        <input type="text" class="form-control">
+                    <form method="POST" id="new-event-form">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="name-event">Nome do evento</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="start-date-event">Dia e horário do evento</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="end-date-event">Dia e horário da finalização</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="lot-sell">Quantidade de lotes</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="value-sell">Valor da venda</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="percentage-sell">Valor em % por lote</label>
+                                            <select class="form-control">
+                                                <option value="" disabled selected>Escolha uma opção</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="description-event">Descrição do evento</label>
+                                            <textarea class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="place-event">Local do evento</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="" disabled selected>Escolha uma opção</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="start-date-event">Dia e horário do evento</label>
-                                        <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+                                <div class="image-event w-100">
+                                    <div class="load-image-default">
+                                        <h2 class="text-center text-primary px-3 py-5 border border-3 border-secondary mb-3 rounded-lg">
+                                            Carregue uma<br>imagem
+                                        </h2>
+                                    </div>
+                                    <div class="image-uploaded d-none">
+                                        <img src="" alt="" id="uploaded-img">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="end-date-event">Dia e horário da finalização</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="lot-sell">Quantidade de lotes</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="value-sell">Valor da venda</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="percentage-sell">Valor em % por lote</label>
-                                        <select class="form-control">
-                                            <option value="" disabled selected>Escolha uma opção</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="description-event">Descrição do evento</label>
-                                        <textarea class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="place-event">Local do evento</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="" disabled selected>Escolha uma opção</option>
-                                        </select>
-                                    </div>
+                                <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
+                                    <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
+                                    <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
+                                <input type="file" class="form-control d-none"> 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
-                            <div class="image-event w-100">
-                                <div class="load-image-default">
-                                    <h2 class="text-center text-primary px-3 py-5 border border-3 border-secondary mb-3 rounded-lg">
-                                        Carregue uma<br>imagem
-                                    </h2>
-                                </div>
-                                <div class="image-uploaded d-none">
-                                    <img src="" alt="" id="uploaded-img">
-                                </div>
-                            </div>
-                            <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
-                                <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
-                                <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
-                               <input type="file" class="form-control d-none"> 
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
