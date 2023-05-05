@@ -80,11 +80,45 @@ function eventPreventInputs(){
         if($('#start-event-date').val() != '' && $('#start-event-date').val() > $('#end-event-date').val()){
             if($('#end-event-date').val() != '' && $('#end-event-date').val() < $('#start-event-date').val()){
 
+            }else{
+                return 'ERR000006';
             }
         }else{
             return 'ERR000005';
         }
     }else{
         return "ERR000004";
+    }
+}
+
+function defineLotConfig(element){
+    var id = element.id
+
+    if(id == "unique-lot-check"){
+        $('#manual-value-lot-check').attr("disabled","disabled")
+        $('#lot-units').attr("disabled","disabled")
+        $('#lot-percent').attr("disabled","disabled")
+        if(!element.checked){
+            $('#manual-value-lot-check').removeAttr("disabled","disabled")
+            $('#lot-units').removeAttr("disabled","disabled")
+            $('#lot-percent').removeAttr("disabled","disabled")
+        }
+    }else if(id == "manual-value-lot-check"){
+        $('#unique-lot-check').attr("disabled","disabled")
+        $('#lot-percent').attr("disabled","disabled")
+        $('#lot-sell').attr("disabled","disabled")
+        if(!element.checked){
+            $('#unique-lot-check').removeAttr("disabled","disabled")
+            $('#lot-percent').removeAttr("disabled","disabled")
+            $('#lot-sell').removeAttr("disabled","disabled")
+        }
+    }else if(id == "lot-units"){
+        if($('#manual-value-lot-check')[0].checked == true){
+            $('.manual-inputs').removeClass('d-none')
+            $('.percent-demo').addClass('d-none')
+        }else{
+            $('.percent-demo').removeClass('d-none')
+            $('.#manual-inputs').addClass('d-none')
+        }
     }
 }

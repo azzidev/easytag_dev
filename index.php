@@ -148,24 +148,65 @@
                                             <input type="date" class="form-control">
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="lot-config">Configurações de lotes</label>
+                                            <div class="d-flex">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="unique" id="unique-lot-check" onchange="defineLotConfig(this)">
+                                                    <label class="form-check-label" for="unique-lot-check">
+                                                        Lote único
+                                                    </label>
+                                                </div>
+                                                <div class="form-check ml-3">
+                                                    <input class="form-check-input" type="checkbox" value="manual" id="manual-value-lot-check" onchange="defineLotConfig(this)">
+                                                    <label class="form-check-label" for="manual-value-lot-check">
+                                                        Valor manual por lote
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="lot-sell">Quantidade de lotes</label>
-                                            <input type="number" class="form-control">
+                                            <input type="number" class="form-control" id="lot-units" name="lot-units" oninput="defineLotConfig(this)">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="value-sell">Valor da venda</label>
-                                            <input type="number" class="form-control">
+                                            <input type="number" class="form-control" id="lot-sell" name="lot-sell">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="percentage-sell">Valor em % por lote</label>
-                                            <select class="form-control">
+                                            <select class="form-control" id="lot-percent" name="lot-percent">
                                                 <option value="" disabled selected>Escolha uma opção</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="percent-demo d-none">
+                                        <p class="bg-dark text-white px-3 py-2 pb-3">
+                                            1º Lote - 45 reais<br>
+                                            2º Lote - 60 reais<br>
+                                            3º Lote - 75 reais
+                                        </p>
+                                    </div>
+                                    <div class="manual-inputs d-contents d-none">
+                                        <h3 class="w-100 px-3 my-2 mt-3">Lote 1</h3>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Valor do lote</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Último dia de venda</label>
+                                                <input type="text" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -206,7 +247,7 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary border-0">Criar evento</button>
+                    <button type="button" class="btn btn-primary border-0" onclick="newEvent()">Criar evento</button>
                 </div>
             </div>
         </div>
