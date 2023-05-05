@@ -30,7 +30,7 @@
                                 </div>
                             </div>
 
-                            <div class="card mt-3 pb-3 bg-dark rounded-lg">
+                            <div class="card mt-3 pb-3 bg-transparent rounded-lg">
                                 <div class="row mt-4">
                                     <div class="col-md-12 mb-3">
                                         <h3>Dados da comanda e convidado</h3>

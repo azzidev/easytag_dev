@@ -24,15 +24,15 @@
                     $_SESSION['last_update'] = $obj['last_update'];
                     $_SESSION['status_house'] = $obj['status_house'];
 
-                    header("Location: ../index.php");
+                    header("Location: ../index");
                 }else{
-                    header("Location: ../login.php?error=ERR00003");
+                    header("Location: ../login?error=ERR00003");
                 }
             }
         }else{
-            header("Location: ../login.php?error=ERR00002");
+            header("Location: ../login?error=ERR00002");
         }
     }else{
-        header("Location: ../login.php?error=ERR00001");
+        header("Location: ../login?error=ERR00001");
     }
 ?>
