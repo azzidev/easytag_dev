@@ -10,29 +10,34 @@
         $productsClass = "active";
     }else if($name == "myhouse"){
         $houseClass = "active";
+    }else if($name == "events"){
+        $eventsClass = "active";
     }
 ?>
 <!-- start of sidenav -->
 <aside><div class="sidenav position-sticky d-flex flex-column justify-content-between">
-    <a class="navbar-brand" href="index.php" class="logo">
+    <a class="navbar-brand" href="index" class="logo">
         <img src="images/easytag.png" alt="">
     </a>
 
     <div class="navbar navbar-dark my-4 p-0 font-primary">
         <ul class="navbar-nav w-100">
             <li class="nav-item <?=$indexClass?>">
-                <a class="nav-link text-white px-0 pt-0" href="index.php">Dashboard</a>
+                <a class="nav-link text-white px-0 pt-0" href="index">Dashboard</a>
+            </li>
+            <li class="nav-item <?=$eventsClass?>">
+                <a class="nav-link text-white px-0" href="events">Eventos</a>
             </li>
             <li class="nav-item <?=$barClass?>">
-                <a class="nav-link text-white px-0" href="bar.php">Bar</a>
+                <a class="nav-link text-white px-0" href="bar">Bar</a>
             </li>
             <li class="nav-item <?=$productsClass?>">
-                <a class="nav-link text-white px-0" href="products.php">Produtos</a>
+                <a class="nav-link text-white px-0" href="products">Produtos</a>
             </li>
             <li class="nav-item <?=$houseClass?>">
                 <a class="nav-link text-white">Configurações</a>
                 <div id="drop-menu" class="drop-menu <?=$houseClass?>">
-                    <a class="d-block text-primary" href="myhouse.php">informações da casa</a>
+                    <a class="d-block text-primary" href="myhouse">informações da casa</a>
                 </div>
             </li>
         </ul>

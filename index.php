@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div class="modal backdrop-blur" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="newEventModal" aria-hidden="true">
+    <div class="modal backdrop-blur d-block" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="newEventModal" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content bg-dark-1 shadow-lg">
                 <div class="modal-header border-0">
@@ -126,85 +126,128 @@
                     </button>
                 </div>
                 <div class="modal-body bg-dark rounded-lg mx-2 my-1">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="name-event">Nome do evento</label>
-                                        <input type="text" class="form-control">
+                    <form method="POST" id="new-event-form">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="name-event">Nome do evento</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="start-date-event">Dia e horário do evento</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="end-date-event">Dia e horário da finalização</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="lot-config">Configurações de lotes</label>
+                                            <div class="d-flex">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="unique" id="unique-lot-check" onchange="defineLotConfig(this)">
+                                                    <label class="form-check-label" for="unique-lot-check">
+                                                        Lote único
+                                                    </label>
+                                                </div>
+                                                <div class="form-check ml-3">
+                                                    <input class="form-check-input" type="checkbox" value="manual" id="manual-value-lot-check" onchange="defineLotConfig(this)">
+                                                    <label class="form-check-label" for="manual-value-lot-check">
+                                                        Valor manual por lote
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="lot-sell">Quantidade de lotes</label>
+                                            <input type="number" class="form-control" id="lot-units" name="lot-units" oninput="defineLotConfig(this)">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="value-sell">Valor da venda</label>
+                                            <input type="number" class="form-control" id="lot-sell" name="lot-sell">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="percentage-sell">Valor em % por lote</label>
+                                            <select class="form-control" id="lot-percent" name="lot-percent">
+                                                <option value="" disabled selected>Escolha uma opção</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="percent-demo d-none">
+                                        <p class="bg-dark text-white px-3 py-2 pb-3">
+                                            1º Lote - 45 reais<br>
+                                            2º Lote - 60 reais<br>
+                                            3º Lote - 75 reais
+                                        </p>
+                                    </div>
+                                    <div class="manual-inputs d-contents d-none">
+                                        <h3 class="w-100 px-3 my-2 mt-3">Lote 1</h3>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Valor do lote</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Último dia de venda</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="description-event">Descrição do evento</label>
+                                            <textarea class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="place-event">Local do evento</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="" disabled selected>Escolha uma opção</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="start-date-event">Dia e horário do evento</label>
-                                        <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+                                <div class="image-event w-100">
+                                    <div class="load-image-default">
+                                        <h2 class="text-center text-primary px-3 py-5 border border-3 border-secondary mb-3 rounded-lg">
+                                            Carregue uma<br>imagem
+                                        </h2>
+                                    </div>
+                                    <div class="image-uploaded d-none">
+                                        <img src="" alt="" id="uploaded-img">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="end-date-event">Dia e horário da finalização</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="lot-sell">Quantidade de lotes</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="value-sell">Valor da venda</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="percentage-sell">Valor em % por lote</label>
-                                        <select class="form-control">
-                                            <option value="" disabled selected>Escolha uma opção</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="description-event">Descrição do evento</label>
-                                        <textarea class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="place-event">Local do evento</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="" disabled selected>Escolha uma opção</option>
-                                        </select>
-                                    </div>
+                                <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
+                                    <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
+                                    <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
+                                <input type="file" class="form-control d-none"> 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
-                            <div class="image-event w-100">
-                                <div class="load-image-default">
-                                    <h2 class="text-center text-primary px-3 py-5 border border-3 border-secondary mb-3 rounded-lg">
-                                        Carregue uma<br>imagem
-                                    </h2>
-                                </div>
-                                <div class="image-uploaded d-none">
-                                    <img src="" alt="" id="uploaded-img">
-                                </div>
-                            </div>
-                            <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
-                                <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
-                                <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
-                               <input type="file" class="form-control d-none"> 
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar evento</button>
+                    <button type="button" class="btn btn-primary border-0" onclick="newEvent()">Criar evento</button>
                 </div>
             </div>
         </div>
@@ -276,7 +319,7 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Gerar ingresso</button>
+                    <button type="button" class="btn btn-primary border-0">Gerar ingresso</button>
                 </div>
             </div>
         </div>

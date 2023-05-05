@@ -31,7 +31,7 @@
                 <img src="images/easytag.png" class="w-100">
             </div>
             <div class="col-lg-7 px-0">
-                <form action="modules/auth-credential.php" method="POST">
+                <form action="modules/auth-credential" method="POST">
                     <div class="row rounded-lg bg-dark-1 py-4">
                         <p class="px-3 py-2 mt-3">EasyTAG é uma solução para distribuição de ingresso digital, comanda pós-paga e pré-paga, loja virtual e muito mais.</p>
                         <h3 class="pt-3 pb-1 mx-3 mb-4 border-bottom border-danger">Insira suas credenciais para realizar o login</h3>
