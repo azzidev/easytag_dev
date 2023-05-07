@@ -196,16 +196,18 @@
                                     </div>
                                     <div class="manual-inputs d-contents d-none">
                                         <h3 class="w-100 px-3 my-2 mt-3">Lote 1</h3>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="">Valor do lote</label>
-                                                <input type="text" class="form-control">
+                                        <div class="group-lot d-flex w-100">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Valor do lote</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="">Último dia de venda</label>
-                                                <input type="text" class="form-control">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Último dia de venda</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

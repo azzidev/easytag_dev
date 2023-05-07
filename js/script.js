@@ -79,15 +79,27 @@ function eventPreventInputs(){
     if($('#name-event').val() != '' && $('#name-event').val().length >= 5){
         if($('#start-event-date').val() != '' && $('#start-event-date').val() > $('#end-event-date').val()){
             if($('#end-event-date').val() != '' && $('#end-event-date').val() < $('#start-event-date').val()){
+                if($('#unique-lot-check')[0].checked == true){
+                    if($('#lot-sell').val() > 0 && $('#lot-sell').val() != ''){
 
+                    }else{
+                        return 'ERR00007';
+                    }
+                }else if($('#manual-value-lot-check')[0].checked == true){
+                    for(var iterator = 0; i < $('.manual-inputs .group-lot').children().length; iterator++){
+                        if($('.manual-inputs .group-lot').children()[iterator]){
+                            
+                        }
+                    }
+                }
             }else{
-                return 'ERR000006';
+                return 'ERR00006';
             }
         }else{
-            return 'ERR000005';
+            return 'ERR00005';
         }
     }else{
-        return "ERR000004";
+        return "ERR00004";
     }
 }
 
@@ -116,9 +128,17 @@ function defineLotConfig(element){
         if($('#manual-value-lot-check')[0].checked == true){
             $('.manual-inputs').removeClass('d-none')
             $('.percent-demo').addClass('d-none')
+
+            if($('#lot-units').val() == 0 || $('#lot-units').val() == ''){
+                $('.manual-inputs').addClass('d-none')
+            }
         }else{
             $('.percent-demo').removeClass('d-none')
             $('.#manual-inputs').addClass('d-none')
+
+            if($('#lot-units').val() == 0 || $('#lot-units').val() == ''){
+                $('.percent-demo').addClass('d-none')
+            }
         }
     }
 }
