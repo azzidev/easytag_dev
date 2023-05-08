@@ -117,7 +117,7 @@
     </div>
 
     <div class="modal backdrop-blur d-block" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="newEventModal" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered" role="document">
             <div class="modal-content bg-dark-1 shadow-lg">
                 <div class="modal-header border-0">
                     <h5 class="modal-title" id="exampleModalLongTitle">Conte mais sobre seu evento</h5>
@@ -139,13 +139,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="start-date-event">Dia e horário do evento</label>
-                                            <input type="date" class="form-control">
+                                            <input type="datetime-local" class="form-control" min="<?=date('Y-m-d H:i:s')?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="end-date-event">Dia e horário da finalização</label>
-                                            <input type="date" class="form-control">
+                                            <input type="datetime-local" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -182,9 +182,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="percentage-sell">Valor em % por lote</label>
-                                            <select class="form-control" id="lot-percent" name="lot-percent">
-                                                <option value="" disabled selected>Escolha uma opção</option>
-                                            </select>
+                                            <input type="number" class="form-control" id="lot-percent" name="lot-percent">
                                         </div>
                                     </div>
                                     <div class="percent-demo d-none">
@@ -220,9 +218,54 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="place-event">Local do evento</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="" disabled selected>Escolha uma opção</option>
-                                            </select>
+                                            
+                                            <div class="input-group mb-3">
+                                                <select name="place-event" id="place-event" class="form-control pr-2">
+                                                    <option value="" disabled selected>Escolha uma opção</option>
+                                                </select>
+                                                <div class="input-group-prepend">
+                                                    <button type='button' class="btn btn-primary border-0" onclick="newAddessToEvent(this)">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-address-inputs d-contents d-none">
+                                        <h3 class="w-100 px-3 py-3">Adicionar novo endereço</h3>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="cep-house">CEP</label>
+                                                <input type="text" class="form-control" id="cep-house">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="complement-house">Número</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="complement-house">Complemento</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="street-house">Rua</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="city-house">Cidade</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="state-house">Estado</label>
+                                                <input type="text" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -236,12 +279,13 @@
                                     </div>
                                     <div class="image-uploaded d-none">
                                         <img src="" alt="" id="uploaded-img">
+                                        <input type="text" class="d-none top-0 left-0 position-absolute">
                                     </div>
                                 </div>
                                 <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
                                     <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
                                     <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
-                                <input type="file" class="form-control d-none"> 
+                                    <input type="file" class="form-control d-none"> 
                                 </div>
                             </div>
                         </div>
@@ -256,7 +300,7 @@
     </div>
 
     <div class="modal backdrop-blur">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered" role="document">
             <div class="modal-content bg-dark-1 shadow-lg">
                 <div class="modal-header border-0">
                     <h5 class="modal-title" id="exampleModalLongTitle">Quem será o convidado?</h5>
@@ -322,6 +366,19 @@
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary border-0">Gerar ingresso</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal backdrop-blur d-none click_fademe"> <!-- Add d-block to show modal -->
+        <div class="modal-dialog modal-xs modal-dialog-centered" role="document">
+            <div class="modal-content bg-dark-1 shadow-lg border py-4"> <!-- Add border-color to set border color to problem -->
+                <div class="modal-header border-0 pt-0">
+                    <h4 class="modal-title" id="exampleModalLongTitle"></h4> <!-- Add title text set pronblem -->
+                </div>
+                <div class="modal-body bg-dark rounded-lg mx-2">
+                    <!-- Add description text set pronblem -->
                 </div>
             </div>
         </div>
