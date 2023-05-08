@@ -284,7 +284,7 @@
                                 </div>
                                 <div class="upload-image-event d-flex align-items-center justify-content-center flex-column">
                                     <p class="text-center">Defina uma imagem para chamar atenção do seu público</p>
-                                    <button class="btn-primary px-2 py-2 border-0 mt-3">Enviar uma imagem</button>
+                                    <button class="btn-primary px-2 py-2 border-0 mt-3" onclick="$()">Enviar uma imagem</button>
                                     <input type="file" class="form-control d-none"> 
                                 </div>
                             </div>
