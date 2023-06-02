@@ -1,5 +1,5 @@
 # EasyTAG | Ultimate Digital Ticket Distribution App
-TicketEase is an innovative mobile application designed to revolutionize the way you experience events and manage your tickets. With a seamless combination of digital ticket distribution, a digital ordering system, and a virtual store, TicketEase aims to enhance your event-going experience like never before.
+EasyTAG is an innovative mobile application designed to revolutionize the way you experience events and manage your tickets. With a seamless combination of digital ticket distribution, a digital ordering system, and a virtual store, EasyTAG aims to enhance your event-going experience like never before.
 
 --------------
 
