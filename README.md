@@ -4,7 +4,7 @@ EasyTAG is an innovative mobile application designed to revolutionize the way yo
 --------------
 
 ## Digital Ticket Distribution
-EasyTAG eliminates the need for physical tickets by providing a secure and convenient digital ticketing system. Once you purchase a ticket, it will be instantly delivered to your TicketEase app, eliminating the hassle of printing or carrying paper tickets. Your digital ticket contains all the necessary details, including event information, seat allocation, and QR code for easy event entry.
+EasyTAG eliminates the need for physical tickets by providing a secure and convenient digital ticketing system. Once you purchase a ticket, it will be instantly delivered to your EasyTAG app, eliminating the hassle of printing or carrying paper tickets. Your digital ticket contains all the necessary details, including event information, seat allocation, and QR code for easy event entry.
 
 ## Mobile Ordering System
 With EasyTAG, you can now order refreshments, merchandise, and other event-related items directly from your mobile device. No more waiting in long lines or missing out on the action. Simply browse the available options, make your selections, and have them delivered to your seat or a designated pick-up point at your convenience.
