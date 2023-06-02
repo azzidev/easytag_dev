@@ -23,16 +23,16 @@ EasyTAG introduces a revolutionary feature called Paiger. Paiger is a personaliz
 
 ## Do you understand the benefits?
 
-### Convenience
+#### Convenience
 Say goodbye to physical tickets, long queues, and crowded merchandise stalls. EasyTAG offers a one-stop solution for all your event needs, right at your fingertips.
 
-### Efficiency
+#### Efficiency
 By digitizing ticket distribution and implementing a mobile ordering system, EasyTAG streamlines the event experience, reducing wait times and enhancing overall efficiency.
 
-## Personalization
+#### Personalization
 With the Paiger feature, EasyTAG offers a personalized event discovery experience, ensuring you never miss out on events that align with your preferences.
 
-## Security
+#### Security
 EasyTAG prioritizes the security of your digital tickets. Each ticket is encrypted, and the app employs robust security measures to protect your information and prevent unauthorized access.
 
 EasyTAG is the future of event ticketing and management. Say goodbye to physical tickets, long lines, and missed opportunities. Embrace the convenience, efficiency, and personalized experience offered by TicketEase and make every event a memorable one. Download the app now and unlock a whole new world of event-going possibilities.
