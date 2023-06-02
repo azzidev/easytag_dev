@@ -1,5 +1,5 @@
 # EasyTAG | Ultimate Digital Ticket Distribution App
-EasyTAG is an innovative mobile application designed to revolutionize the way you experience events and manage your tickets. With a seamless combination of digital ticket distribution, a digital ordering system, and a virtual store, EasyTAG aims to enhance your event-going experience like never before.
+app is a digital ticket distribution and digital ordering platform that revolutionizes the way events are managed. With this app, users can easily purchase and distribute digital tickets for various events such as concerts, sports games, and conferences.
 
 --------------
 
