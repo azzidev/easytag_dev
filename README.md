@@ -32,4 +32,6 @@ With the Paiger feature, EasyTAG offers a personalized event discovery experienc
 #### Security
 EasyTAG prioritizes the security of your digital tickets. Each ticket is encrypted, and the app employs robust security measures to protect your information and prevent unauthorized access.
 
+--------------
+
 EasyTAG is the future of event ticketing and management. Say goodbye to physical tickets, long lines, and missed opportunities. Embrace the convenience, efficiency, and personalized experience offered by TicketEase and make every event a memorable one. Download the app now and unlock a whole new world of event-going possibilities.
