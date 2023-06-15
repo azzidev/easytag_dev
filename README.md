@@ -1,5 +1,3 @@
-###### THIS APPLICATION IS STILL UNDER DEVELOPMENT, SOME ACTIONS MAY NOT WORK OR HAVE STOPPED WORKING OR EXISTING AS THE APPLICATION DEVELOPS. WE RECOMMEND ITS USE ONLY FOR PERSONAL USE. WE REMOVE ANY COMMITMENT TO FUNCTIONALITY, AS WELL AS CONSTANT UPDATES TO RESOLVE PROBLEMS. THE PROJECT IS OPEN SOURCE, THEREFORE YOU CAN MAKE YOUR OWN UPDATES AND CONTRIBUTE TO THE FUNCTIONING OF THE APPLICATION.
-
 # EasyTAG | Ultimate Digital Ticket Distribution App
 app is a digital ticket distribution and digital ordering platform that revolutionizes the way events are managed. With this app, users can easily purchase and distribute digital tickets for various events such as concerts, sports games, and conferences.
 
